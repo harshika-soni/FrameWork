@@ -18,7 +18,7 @@ public class FetchDatazFromJsonFile {
 
 		ObjectMapper jsonData = new ObjectMapper();
 		JsonNode data = jsonData.readTree(file);
-	
+//pulling	
 		String URL = data.get("url").asText();
 		String USERNAME = data.get("username").asText();
 		String PASSWORD = data.get("password").asText();
