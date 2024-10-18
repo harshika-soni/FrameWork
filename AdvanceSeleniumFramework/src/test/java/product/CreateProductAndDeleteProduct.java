@@ -2,22 +2,25 @@ package product;
 
 import java.io.IOException;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import genericutility.BaseClass;
 import genericutility.Excel_Utility;
 import genericutility.File_Utility;
 import genericutility.Java_Utility;
 import genericutility.WebDriver_Utility;
 import objectRepo.CreateProductPage;
 import objectRepo.DeletePrdAndValidate;
+import objectRepo.DeletePrdName;
 import objectRepo.VTigerHomePage;
 import objectRepo.VTigerLoginPage;
 
-public class CreateProductAndDeleteProduct {
+public class CreateProductAndDeleteProduct  {
 
 	public static void main(String[] args) throws Throwable {
-		
+		//public void CreateProductAndDeleteProductTest() throws Throwable {
 		WebDriver driver = new ChromeDriver();
 		
 		 Excel_Utility elib=new Excel_Utility();
@@ -27,13 +30,13 @@ public class CreateProductAndDeleteProduct {
 		 int ranNum=jlib.getRandomNum();
 	      wlib.windowMaximize(driver);
                
-                
+          /*      
                String URL = flib.getKeyAndValuePair("url")  ;
              String USERNAME= flib.getKeyAndValuePair("username")  ;
             String PASSWORD = flib.getKeyAndValuePair("password")  ;
               driver.get(URL);
               VTigerLoginPage login = new VTigerLoginPage(driver);
-                  login.loginToVtiger(USERNAME, PASSWORD);
+                  login.loginToVtiger(USERNAME, PASSWORD);*/
               	VTigerHomePage home= new VTigerHomePage(driver);
               	home.clickproductlink();
               	CreateProductPage prdPage= new CreateProductPage(driver);
@@ -41,8 +44,9 @@ public class CreateProductAndDeleteProduct {
              String prdName= elib.getExcelData("Product",2,2)+ranNum;
              prdPage.enterPrdName(prdName);
              prdPage.clicksaveButton();
+           //  driver.findElement(By.xpath("//input[@value='Delete']")).click();
       ///====================================================================================       
-      DeletePrdAndValidate delprd= new DeletePrdAndValidate(driver);
+     DeletePrdAndValidate delprd= new DeletePrdAndValidate(driver);
       delprd.clickPrdlink();
       delprd.clickPrdName(driver, prdName);
       delprd.clickOnDeleteLink();
@@ -50,6 +54,10 @@ public class CreateProductAndDeleteProduct {
       delprd.validatePrdDeleted(driver, prdName);
       Thread.sleep(2000);
       home.logOutFromApp();
+           //  DeletePrdName dpn= new DeletePrdName(driver);
+             //dpn.selectPrdData(driver, prdName);
+            // dpn.clickOnDeleteButton();
+      //       dpn.validatePrdDeleted(driver, prdName);*/
 
 	}
 

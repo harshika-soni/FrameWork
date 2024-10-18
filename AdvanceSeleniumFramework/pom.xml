@@ -1,5 +1,5 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+ <modelVersion>4.0.0</modelVersion>
   <groupId>Qspider</groupId>
   <artifactId>AdvanceSeleniumProject</artifactId>
   <version>0.0.1-SNAPSHOT</version>
@@ -15,7 +15,7 @@
 <dependency>
     <groupId>org.testng</groupId>
     <artifactId>testng</artifactId>
-    <version>6.11</version>
+    <version>7.7.1</version>
     <scope>test</scope>
 </dependency>
 <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
@@ -71,13 +71,30 @@
         <version>3.5.0</version>
         <configuration>
           <suiteXmlFiles>
-			<suiteXmlFile>regressiontestng.xml</suiteXmlFile>
+			<suiteXmlFile>Batchtestng.xml</suiteXmlFile>
 				</suiteXmlFiles>
              </configuration>
         </plugin>
 			</plugins>
 		</build>
 	</profile>
-  </profiles>
+   <profile>
+			<id>SuiteTwo</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>3.5.0</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>regressiontestng.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
   
 </project>

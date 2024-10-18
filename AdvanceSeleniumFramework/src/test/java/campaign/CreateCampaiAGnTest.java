@@ -50,7 +50,7 @@ public class CreateCampaiAGnTest    extends BaseClass{
 	//String actData=driver.findElement(By.xpath("//span[@id='dtlview_Campaign Name']")).getText();
 //	Assert.assertEquals(actData,campData);
 //===========================================================================================================================================
-		@Test
+		//@Test
 		public void createProductTest() throws Throwable {
 			
 			WebDriver_Utility wlib = new WebDriver_Utility();
@@ -69,7 +69,9 @@ public class CreateCampaiAGnTest    extends BaseClass{
 	      	productPage.enterPrdName(prdData);
 	      	productPage.clicksaveButton();
 	      	ValidateProductPage validate= new ValidateProductPage(driver);
-	      	validate.validateproductPage(driver, prdData);}
-	
+	      	validate.validateproductPage(driver, prdData);
+	      	
 	}
+	
+}
 

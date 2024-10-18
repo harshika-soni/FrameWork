@@ -33,7 +33,7 @@ public class ExtendsReports  implements ITestListener {
 		System.out.println("----------im taking ScreenShot-----");
 		String screenshot=null;
 		try {
-			screenshot = WebDriver_Utility.takeScreenShot1(BaseClass.sdriver, result.getMethod().getMethodName());
+			//screenshot = WebDriver_Utility.takeScreenShot1(BaseClass.sdriver, result.getMethod().getMethodName());
 
 		} catch (Throwable e) {
 

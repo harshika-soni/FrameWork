@@ -24,9 +24,7 @@ public class DeletePrdName {
      public void clickOnDeleteButton() {
     	 deleteButton.click();
      }
-     public void clickPrdName(WebDriver driver,String prdName) {
-    	 driver.findElement(By.xpath("//table[@class='lvt small']/tbody/tr/td//a[text()='"+prdName+"']/../preceding-sibling::td//input[@type='checkbox']")).click();
-    	 	}
+     
     	 public void validatePrdDeleted(WebDriver driver, String prdName1) {
     	 	List<WebElement> productlist = driver.findElements(By.xpath("(//table[@class='lvt small']/tbody/tr/td[3])[position()>1]"));
     	     boolean flag=false;

@@ -92,8 +92,8 @@ public class CreateProduct {
 			wlib.alertAccept(driver);
 	  	
 	   dpn.validatePrdDeleted(driver, PrdName);	*/
-		driver.findElement(By.xpath("//img[@src='themes/softed/images/user.PNG']")).click();
-		driver.findElement(By.linkText("Sign Out")).click();
+	//	driver.findElement(By.xpath("//img[@src='themes/softed/images/user.PNG']")).click();
+	//	driver.findElement(By.linkText("Sign Out")).click();
 		
 	   	
 	   	

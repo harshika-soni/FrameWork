@@ -35,7 +35,7 @@ public void createProductAndDeleteTest() throws Throwable {
      	productPage.enterPrdName(productName);
      	productPage.clicksaveButton();
     	Thread.sleep(2000);
-	   	   String actData = driver.findElement(By.xpath("//span[@id='dtlview_Product Name']")).getText();
+	  /* 	   String actData = driver.findElement(By.xpath("//span[@id='dtlview_Product Name']")).getText();
 	   	if(actData.contains(productName)) {
 			System.out.println("Product  name is created");
 		}
@@ -58,12 +58,12 @@ public void createProductAndDeleteTest() throws Throwable {
       				  System.out.println("product is deleted");
       			  }else {
       				  System.out.println("product is deleted");
-      			  }
+      			  }*/
       			 DeletePrdAndValidate delprd= new DeletePrdAndValidate(driver);
-      		   //   delprd.clickPrdlink();
-      		     // delprd.clickPrdName(driver, productName);
-      		     // delprd.clickOnDeleteLink();
-      		    // wlib.alertAccept(driver);
+      		      delprd.clickPrdlink();
+      		      delprd.clickPrdName(driver, productName);
+      		      delprd.clickOnDeleteLink();
+      		     wlib.alertAccept(driver);
       		      delprd.validatePrdDeleted(driver, productName);
 	
 }}

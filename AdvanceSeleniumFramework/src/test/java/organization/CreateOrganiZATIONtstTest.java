@@ -15,7 +15,7 @@ import objectRepo.CreateOrgPage;
 import objectRepo.VTigerHomePage;
 import objectRepo.ValidatingPage;
 @Listeners(genericutility.ExtendsReports.class)
-public class CreateOrganiZATIONtstTest extends BaseClass {
+public class CreateOrganiZATIONtstTest  extends BaseClass {
 	@Test(groups="smokeTest")
 	public void createOrganiZATIONtstTest() throws Throwable{
 	WebDriver_Utility wlib = new WebDriver_Utility();
